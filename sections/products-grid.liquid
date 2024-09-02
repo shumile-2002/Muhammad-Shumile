@@ -249,7 +249,44 @@
   }
 
   /* Custom Select Button */
-
+  .custom-select-wrapper {
+    position: relative;
+    user-select: none;
+    width: 100%;
+  }
+  .custom-select-wrapper select {
+    display: none;
+}
+  .select-styled {
+    position: relative;
+    background-color: #fff;
+    color: #333;
+    padding: 8px 15px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+  .select-styled::after {
+    content: url('https://cdn.shopify.com/s/files/1/0616/3801/7089/files/open-close.png?v=1725297871');
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .select-styled.active::after {
+    top: unset;
+    left: 50%;
+    transform: rotoate(180deg;);
+  }
+  .select-styled::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    border: 1px solid #000;
+    right: 50px;
+    top: 0;
+}
+  
   
   
   
