@@ -3,7 +3,7 @@
 let shouldAddGift = false;
 
 // We can also get this from customizer
-const giftVariantId = 41679668707393;
+const giftVariantId = 41679665102913;
 
  let giftData = {
  'items': [{
