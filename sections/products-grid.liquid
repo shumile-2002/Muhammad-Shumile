@@ -9,13 +9,18 @@
           <div class="product-container">
             <img src={{ product.media.first | img_url: 'master' }}>
             <div class="product-button"><img src="https://cdn.shopify.com/s/files/1/0616/3801/7089/files/product-button.png?v=1725297871"></div>
-
             
+            <div class="product-detail product-popup">
+              
+            </div>
           </div>
         {% endfor %}
     </div>
   </div>
 </section>
+
+
+<script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
 
   
  
