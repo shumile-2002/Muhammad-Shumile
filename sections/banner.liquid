@@ -2,6 +2,10 @@
 
 <section class="banner">
   <div class="ann-bar">
+    <div class="bread-crumb">
+      <img src="https://cdn.shopify.com/s/files/1/0616/3801/7089/files/bread-crumb.png?v=1725297871" id="bread-crumb">
+      <img src="https://cdn.shopify.com/s/files/1/0616/3801/7089/files/side-cross.png?v=1725297871" id="close-crumb">
+    </div>
     <div class="custom-page-width">
       <div class="ann-bar-content">
         <h3 class="logo-text">{{ section.settings.logo_text }}</h3>
@@ -270,8 +274,15 @@
     .custom-button {
       padding: 5px 15px;
     }
-    /* mobile sidebar */
     
+    /* mobile sidebar */
+    .ann-bar {
+      position: relative;
+    }
+    .bread-crumb {
+      width: 15px;
+      position: absolute;
+    }
   }
   
   
