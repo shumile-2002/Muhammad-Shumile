@@ -51,6 +51,15 @@
                                     </option>
                                  {% endfor %}
                              </select>
+                             
+                             <!-- Custom Select as per figma design -->
+                             <div class="select-styled">{{ option.selected_value | default: 'Select' | append: option.name }}</div>
+                             <ul class="select-options">
+                               <li>Select {{ option.name }}</li>
+                               {% for value in option.values %}
+                                 <li rel="{{ value | escape }}">{{ value }}</li>
+                               {% endfor %}
+                             </ul>
                            </div>
                         </div>
                       {% endif %}
