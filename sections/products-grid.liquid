@@ -40,28 +40,26 @@
                         </div>
                       </div>
                       {% elsif  option.name == "Size"%}
-                         <div class="size-picker input-set">
-                           <label for="{{ option.name }}-{{ product.id }}">{{ option.name }}</label>
-                           <div class="size-options input-options custom-select-wrapper">
-                             <select>
-                               <option>Select {{ option.name }}</option>
-                               {% for value in option %}
-                                    <option value="{{ value | escape }}">
-                                      {{ value }}
-                                    </option>
-                                 {% endfor %}
-                             </select>
-                             
-                             <!-- Custom Select as per figma design -->
-                             <div class="select-styled">{{ option.selected_value | default: 'Select' | append: option.name }}</div>
-                             <ul class="select-options">
-                               <li>Select {{ option.name }}</li>
-                               {% for value in option.values %}
-                                 <li rel="{{ value | escape }}">{{ value }}</li>
-                               {% endfor %}
-                             </ul>
-                           </div>
-                        </div>
+                          <div class="size-picker input-set">
+                    <label for="{{ option_name }}-{{ product.id }}">{{ option.name }}</label>
+                    <div class="size-options input-options custom-select-wrapper">
+                      <select id="{{ option_name }}-{{ product.id }}" name="{{ option.name }}">
+                        <option value="">Select {{ option.name }}</option>
+                        {% for value in option.values %}
+                          <option value="{{ value | escape }}"{% if option.selected_value == value %} selected="selected"{% endif %}>
+                            {{ value }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                      <div class="select-styled">{{ option.selected_value | default: 'Select ' | append: option.name }}</div>
+                      <ul class="select-options">
+                        <li rel="">Select {{ option.name }}</li>
+                        {% for value in option.values %}
+                          <li rel="{{ value | escape }}">{{ value }}</li>
+                        {% endfor %}
+                      </ul>
+                    </div>
+                  </div>
                       {% endif %}
                   {% endfor %}
 
