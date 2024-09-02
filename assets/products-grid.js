@@ -23,6 +23,7 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     e.preventDefault();
 
     const data = new FormData(form);
+    console.log(data)
 
     await fetch("/cart/add", {
       method: "post",
