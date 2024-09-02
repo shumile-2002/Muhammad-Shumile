@@ -305,13 +305,14 @@
       transform: translateX(-100%);
       z-index: -1;
       opacity: 0;
+      transition: tranform 0.4s ease, opacity 0.4s ease, z-index 0s 0.4s;
     }
     .mobile-sidebar.active {
       transform: translateX(0);
       z-index: 1;
       opacity: 1;
       position: unset;
-      
+      transition: tranform 0.4s ease, opacity 0.4s ease, z-index 0s;
     } 
   }
   
