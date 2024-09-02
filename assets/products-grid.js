@@ -1,7 +1,14 @@
 ///////////////////////////// Checking for gift /////////////////////////////
+
 let shouldAddGift = false;
 
+// We can also get this from customizer
+const giftVariantId = 41679668707393;
+
+
+
 ///////////////////////////// Ajax Add To Cart Functionality using Fetch /////////////////////////////
+
 document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
 
   // async function to handle Promosies 
@@ -16,12 +23,12 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     });
 
     if (shouldAddGift) {
-      console.log('Should add gift too');
+      
     }
 
     // fetching updated Cart Data
     const cartData = await fetch("/cart.json");
-    const cartDataContents = cartData.json();
+    const cartDataContents = await cartData.json();
 
     console.log('Updated Cart: ', cartDataContents);
     
