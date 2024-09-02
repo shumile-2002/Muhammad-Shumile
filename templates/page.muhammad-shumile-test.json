@@ -20,15 +20,20 @@
         "banner_text_mobile": "Discover Joy: Your Ultimate Holiday Gift Destination.",
         "banner_button_text": "shop now",
         "banner-bottom": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL",
-        "banner-bottom-mobile": ""
+        "banner-bottom-mobile": "SUSTAINABLE, ETHICALLY MADE ACTIVEWEAR"
       }
     },
     "products-grid": {
       "type": "products-grid",
       "settings": {
-        "title": "",
+        "title": "Tisso vison in the wild",
         "products": [
-
+          "black-leather-bag",
+          "blue-silk-tuxedo",
+          "chequered-red-shirt",
+          "classic-leather-jacket",
+          "classic-varsity-top",
+          "dark-denim-top"
         ]
       }
     }
