@@ -64,7 +64,7 @@
                   {% endfor %}
 
                   <!-- Add to Cart and hidden value input -->
-                  <input type="hidden" name="id" id="prodcut-{{ product.id }}" value={{ product.selected_or_first_available_variant.id }} >
+                  <input type="hidden" name="id" id="product-{{ product.id }}" value={{ product.selected_or_first_available_variant.id }} >
                   <button type="submit" class="cart-button custom-button" name="add" >
                     Add to cart
                     <img src="https://cdn.shopify.com/s/files/1/0616/3801/7089/files/white_arrow.png?v=1725297870" class="white-arrow">
