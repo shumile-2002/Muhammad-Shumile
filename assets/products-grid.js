@@ -62,10 +62,9 @@ function handleChange(event) {
 ///////////////////////////// Product & Vairant Identification /////////////////////////////
 
 // getting products using JSON parsing
-const products = JSON.parse(document.getElementById('products').text);
+const products = JSON.parse(document.getElementById("products").text);
 
 // Function to get all the variants by product ID
-const products = JSON.parse(document.getElementById("products").text);
 
 function getVariantsByProductId(productId) {
   const product = products.find((p) => p.id === productId);
