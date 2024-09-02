@@ -4,10 +4,10 @@
   <div class="ann-bar">
     <div class="custom-page-width">
       <div class="ann-bar-content">
-        <h3 class="logo-text">tisso vison</h3>
-        <p class="slogan-text">Find the ideal gift for your loved ones.</p>
+        <h3 class="logo-text">{{ section.settings.logo_text }}</h3>
+        <p class="slogan-text">{{ section.settings.slogan_text }}</p>
         <a href="#" class="bar-button">
-          choose gift
+          {{ section.settings.bar_button_text }}
         </a>
       </div>
     </div>
@@ -19,10 +19,10 @@
     </div>
 
     <div class="banner-content">
-      <div class="banner-title"><h2>The Gift Guide</h2></div>
-      <div class="banner-text"><p>Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.</p></div>
+      <div class="banner-title"><h2>{{ section.settings.banner-title }}</h2></div>
+      <div class="banner-text"><p>{{ section.settings.banner_text }}</p></div>
       <div class="banner-button">
-        <a href="#" class="">Shop Now</a>
+        <a href="#" class="">{{ section.settings.banner_button_text }}</a>
       </div>
     </div>
   </div>
