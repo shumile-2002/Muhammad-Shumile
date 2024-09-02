@@ -218,13 +218,18 @@
   }
   .color-options .radio-label-2::after {
     left: -100%;
-}
+  }
   input[type="radio"]:checked + .radio-label-1::after {
     right: 0;
   }
   input[type="radio"]:checked + .radio-label-2::after {
     left: 0;
-}
+  }
+  input[type="radio"]:not(:checked) + label::after {
+    overflow: hidden;
+    opacity: 0;
+  }
+  
   
 </style>
 
