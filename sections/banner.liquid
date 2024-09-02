@@ -170,6 +170,7 @@
   }
   .bottom-mobile {
     display: none;
+    font-size: 14px;
   }
   .mobile-banner {
     display: none;
@@ -317,14 +318,13 @@
       transform: translateX(-100%);
       z-index: -1;
       opacity: 0;
-      transition: tranform 0.4s ease, opacity 0.4s ease, z-index 0s 0.4s;
+      transition: transform 0.5s ease-out;
     }
     .mobile-sidebar.active {
       transform: translateX(0);
       z-index: 1;
       opacity: 1;
       position: unset;
-      transition: tranform 0.4s ease, opacity 0.4s ease, z-index 0s;
     } 
     .bread-crumb.active #close-crumb {
       display: block;
