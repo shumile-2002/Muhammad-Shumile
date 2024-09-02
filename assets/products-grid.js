@@ -17,7 +17,7 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     const cartData = await fetch("/cart.json");
     const cartDataContents = cartData.json();
 
-    
+    console.log('Updated Cart: ', cartDataContents);
     
   })
  })
