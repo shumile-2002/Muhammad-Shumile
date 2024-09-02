@@ -68,6 +68,7 @@ const products = JSON.parse(document.getElementById("products").text);
 
 function getVariantsByProductId(productId) {
   const product = products.find((p) => p.id === productId);
+  console.log("Product", product)
   return product ? product.variants : null;
 }
 
