@@ -33,7 +33,7 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     if (shouldAddGift) {
       await fetch("/cart/add", {
       method: "post",
-      body: json.stringify(giftData)
+      body: JSON.stringify(giftData)
     });
       console.log('Gift Product Added !!')
     }
