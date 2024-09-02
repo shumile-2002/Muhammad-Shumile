@@ -12,11 +12,24 @@
     "banner": {
       "type": "banner",
       "settings": {
+        "logo_text": "tisso vison",
+        "slogan_text": "Find the ideal gift for your loved ones.",
+        "bar_button_text": "choose yours",
+        "banner-title": "The Gift Guide",
+        "banner_text": "Discover Joy: Your Ultimate Holiday Gift Destination. Explore our curated selection and find the perfect gifts to delight your loved ones this holiday season.",
+        "banner_text_mobile": "Discover Joy: Your Ultimate Holiday Gift Destination.",
+        "banner_button_text": "shop now",
+        "banner-bottom": "SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL",
+        "banner-bottom-mobile": ""
       }
     },
     "products-grid": {
       "type": "products-grid",
       "settings": {
+        "title": "",
+        "products": [
+
+        ]
       }
     }
   },
