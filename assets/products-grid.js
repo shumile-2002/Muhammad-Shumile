@@ -38,7 +38,7 @@ function handleChange(event) {
     let currentColorOption = form.querySelector('input[name="Color"]:checked');
     let selectedColor;
 
-    if (currentColor) {
+    if (currentColorOption) {
       selectedColor = currentColorOption.value;
     } else {
       selectedColor = form.querySelector('input[name="Color"]').value;
