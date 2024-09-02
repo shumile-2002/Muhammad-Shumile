@@ -31,17 +31,15 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     });
 
     if (shouldAddGift) {
+      const giftData = new FormData();
+      giftData.append('items[0][id]', giftVariantId);
+      giftData.append('items[0][quantity]', 1);
+
       await fetch("/cart/add", {
-      method: "post",
-      body: {
-              items: [
-                {
-                  id: `${giftVariantId}`,
-                  quantity: 1
-                }
-              ]
-            }
-    });
+        method: "post",
+        body: giftData
+      });
+      
       console.log('Gift Product Added !!')
     }
 
