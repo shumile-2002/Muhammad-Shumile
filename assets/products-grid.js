@@ -1,7 +1,20 @@
 ///////////////////////////// Product & Vairant Identification /////////////////////////////
 
+// getting products using JSON parsing
 const products = JSON.parse(document.getElementById('products').text);
-console.log(products)
+
+// Function to get all the variants by product ID
+function getVariantsByProductId(productId) {
+  const product = products.find((p) => p.id === productId);
+  return product ? product.variants : null
+}
+
+// Function to find the matching variant using options
+function findMatchingVariant(size, color, variants) {
+  return variants.find(
+    (variant) => variant.options.includes(size) && variant.options.includes(color)
+  );
+}
 
 
 
