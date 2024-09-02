@@ -34,6 +34,7 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
       method: "post",
       body: giftData
     });
+      console.log('Gift Product Added !!')
     }
 
     // fetching updated Cart Data
