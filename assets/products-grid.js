@@ -1,3 +1,5 @@
+///////////////////////////// Checking for gift /////////////////////////////
+let shouldAddGift = false;
 
 ///////////////////////////// Ajax Add To Cart Functionality using Fetch /////////////////////////////
 document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
@@ -12,6 +14,10 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
       method: "post",
       body: data
     });
+
+    if (shouldAddGift) {
+      console.log('Should add gift too');
+    }
 
     // fetching updated Cart Data
     const cartData = await fetch("/cart.json");
@@ -68,8 +74,9 @@ function handleChange(event) {
       selectedColor = form.querySelector('input[name="Color"]').value;
     }
     
-    console.log('Selected Color: ', selectedColor);
-    console.log('Selected Size: ', selectedSize);
+    if (selectedSize == "M" && selectedColor == "Black") {
+      shouldAddGift = true;
+    }
 
     const matchingVariant = findMatchingVariant(selectedSize, selectedColor, variants);
     console.log('Matching Varaint: ', matchingVariant);
