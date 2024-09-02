@@ -26,7 +26,8 @@ function handleChange(event) {
   console.log('changed');
   const form = event.target.closest('form');
   if (form) {
-    let productID = 7417483067457;
+    console.log('data id: ', form.getAttribute('data-product-id'))
+    let productID = ;
     console.log("Product ID: ", productID);
     const variants = getVariantsByProductId(productID);
     console.log(variants);
