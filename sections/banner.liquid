@@ -346,10 +346,10 @@
     const activeCrumb = document.querySelector('.bread-crumb.active');
 
     if (!activeCrumb) {
-      sideBar.classList.add('active');
+      e.target.classList.add('active');
       sideBarOpener.classList.add('active');
     } else {
-      sideBar.classList.remove('active');
+      e.target.classList.remove('active');
       sideBarOpener.classList.remove('active');
     }
   })
