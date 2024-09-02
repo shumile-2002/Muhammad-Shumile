@@ -1,3 +1,30 @@
+///////////////////////////// Options change handler Function /////////////////////////////
+
+function handleChange(event) {
+  const form = event.target.closest('form');
+  if (form) {
+    let productID = form.getAttribute('data-product-id');
+    console.log("Product ID: ", productID);
+    const variants = getVariantsByProductId(productID);
+    console.log(variants);
+
+    // Getting Size selected by user
+    const selectedSize = form.querySelector('select').value
+
+    // Getting Color selected by user
+    let currentColorOption = form.querySelector('input[name="Color"]:checked');
+    let selectedColor;
+
+    if (currentColor) {
+      selectedColor = currentColorOption.value;
+    } else {
+      selectedColor = form.querySelector('input[name="Color"]').value;
+    }
+  }
+}
+
+
+
 ///////////////////////////// Product & Vairant Identification /////////////////////////////
 
 // getting products using JSON parsing
@@ -15,6 +42,8 @@ function findMatchingVariant(size, color, variants) {
     (variant) => variant.options.includes(size) && variant.options.includes(color)
   );
 }
+
+
 
 
 
