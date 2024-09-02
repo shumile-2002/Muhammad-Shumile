@@ -7,7 +7,7 @@ const giftVariantId = 41679665102913;
 
  let giftData = {
  'items': [{
-  'id': 41679668707393,
+  'id': giftVariantId,
   'quantity': 1
   }]
 };
