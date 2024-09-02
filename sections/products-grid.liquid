@@ -41,6 +41,17 @@
                       </div>
                       {% elsif  option.name == "Size"%}
                          <div class="size-picker input-set">
+                           <label for="{{ option.name }}-{{ product.id }}">{{ option.name }}</label>
+                           <div class="size-options input-options">
+                             <select>
+                               <option>Select {{ option.name }}</option>
+                               {% for value in option %}
+                                    <option value="{{ value | escape }}">
+                                      {{ value }}
+                                    </option>
+                                 {% endfor %}
+                             </select>
+                           </div>
                         </div>
                       {% endif %}
                   {% endfor %}
