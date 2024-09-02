@@ -2,15 +2,8 @@
 
 let shouldAddGift = false;
 
-// We can also get this from customizer
+// Variant Id of "Soft Winter Jacket"
 const giftVariantId = 41679668707393;
-
- let giftData = {
- 'items': [{
-  'id': giftVariantId,
-  'quantity': 1
-  }]
-};
 
 
 
