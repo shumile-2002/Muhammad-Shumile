@@ -1,4 +1,7 @@
+///////////////////////////// Product & Vairant Identification /////////////////////////////
 
+const products = JSON.parse(document.getElementById('products').text);
+console.log(products)
 
 
 
