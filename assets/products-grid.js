@@ -3,7 +3,7 @@
 
 ///////////////////////////// Event Listener to Select and Radio Inputs /////////////////////////////
 
- document.querySelectorAll('form[action="/card/add"]').forEach((form) => {
+ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
    // Listene to all select elements
    const selects = form.querySelectorAll('select');
   selects.forEach((select) => {
