@@ -13,7 +13,7 @@
    // Listene to all radio inputs
    const radios = form.querySelectorAll('input[type="radio"]');
   radios.forEach((radio) => {
-    radio.addEventListener('change', handleChange)
+    radio.addEventListener('change', handleChange);
   })
  })
 
