@@ -64,6 +64,10 @@
                         </div>
                       {% endif %}
                   {% endfor %}
+
+                  <!-- Add to Cart and hidden value input -->
+                  
+                  <input type="hidden" name="id" id="prodcut-{{ product.id }}" value={{ product.selected_or_first_available_variant }} >
                 </form>
               </div>
             </div>
