@@ -338,11 +338,11 @@
   // Mobile Sidebar Script
   const sideBar = document.querySelector('.mobile-sidebar');
   const sideBarOpener = document.querySelector('.bread-crumb');
-  const breadCrumb = document.getElementById('bread-crumb-icon');
 
-  // Adding click event on bread-crumb icon
 
-  breadCrumb.addEventListener('click', (e) => {
+  // Adding click event on bread-crumb opener
+
+  sideBarOpener.addEventListener('click', (e) => {
     const activeCrumb = document.querySelector('.bread-crumb.active');
 
     if (!activeCrumb) {
