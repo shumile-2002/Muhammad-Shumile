@@ -32,7 +32,7 @@
                         <label>{{ option.name }}</label>
                         <div class="color-options input-options">
                           {% for value in option.values %}
-                            <input type="radio" id="{{ value }}-{{ product.id }}" name="{{ option.name }}">
+                            <input type="radio" id="{{ value }}-{{ product.id }}" value ="{{ value }}" name="{{ option.name }}">
                             <label class="radio-label-{{ forloop.index }}" for="{{ value }}-{{ product.id }}">
                               <span style="background-color: {{ value }}"></span> {{ value }}
                             </label>
