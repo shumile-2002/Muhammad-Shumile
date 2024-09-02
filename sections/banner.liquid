@@ -3,7 +3,7 @@
 <section class="banner">
   <div class="ann-bar">
     <div class="bread-crumb">
-      <img src="https://cdn.shopify.com/s/files/1/0616/3801/7089/files/bread-crumb.png?v=1725297871" id="bread-crumb">
+      <img src="https://cdn.shopify.com/s/files/1/0616/3801/7089/files/bread-crumb.png?v=1725297871" id="bread-crumb-icon">
       <img src="https://cdn.shopify.com/s/files/1/0616/3801/7089/files/side-cross.png?v=1725297871" id="close-crumb">
     </div>
     <div class="custom-page-width">
@@ -126,7 +126,7 @@
     background: #FFF544;
     color: #000;
   }
-  #close-crumb, #bread-crumb, .mobile-sidebar {
+  #close-crumb, #bread-crumb-icon, .mobile-sidebar {
     display: none;
   }
   
@@ -260,7 +260,7 @@
       display: flex;
       flex-direction: column-reverse;
     }
-    .mobile-banner, .banner-text .mobile-content, #bread-crumb, .mobile-sidebar {
+    .mobile-banner, .banner-text .mobile-content, #bread-crumb-icon, .mobile-sidebar {
       display: block;
     }
     .banner-title, .banner-text p, .banner-button  {
@@ -330,9 +330,31 @@
     }
   }
   
-  
-  
 </style>
+
+
+<script>
+
+  // Mobile Sidebar Script
+  const sideBar = document.querySelector('.mobile-sidebar');
+  const sideBarOpener = document.querySelector('.bread-crumb');
+  const breadCrumb = document.getElementById('bread-crumb-icon');
+
+  // Adding click event on bread-crumb icon
+
+  breadCrumb.addEventListener('click', (e) => {
+    const activeCrumb = document.querySelector('.bread-crumb.active');
+
+    if (!activeCrumb) {
+      sideBar.classList.add('active');
+      sideBarOpener.classList.add('active');
+    } else {
+      sideBar.classList.remove('active');
+      sideBarOpener.classList.remove('active');
+    }
+  })
+  
+</script>
 
 
 {% schema %}
