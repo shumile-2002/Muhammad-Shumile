@@ -198,10 +198,33 @@
   input[type="radio"] {
     display: none;
 }
+  
   /* Radio inputs Floating Animation */
   input[type="radio"]:checked + label {
     color: #fff;
   }
+  .color-options label::after {
+    position: absolute;
+    content: "";
+    background: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    transition: 0.4s ease-in-out;
+  }
+  .color-options .radio-label-1::after {
+    right: -100%;
+  }
+  .color-options .radio-label-2::after {
+    left: -100%;
+}
+  input[type="radio"]:checked + .radio-label-1::after {
+    right: 0;
+  }
+  input[type="radio"]:checked + .radio-label-2::after {
+    left: 0;
+}
   
 </style>
 
