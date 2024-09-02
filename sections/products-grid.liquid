@@ -34,7 +34,7 @@
                           {% for value in option.values %}
                             <input type="radio" id="{{ value }}-{{ product.id }}" name="{{ option.name }}">
                             <label class="radio-label-{{ forloop.index }}" for="{{ value }}-{{ product.id }}">
-                              <span></span> {{ value }}
+                              <span style="background-color: {{ value }}"></span> {{ value }}
                             </label>
                           {% endfor %}
                         </div>
@@ -228,6 +228,16 @@
   input[type="radio"]:not(:checked) + label::after {
     overflow: hidden;
     opacity: 0;
+  }
+
+  /* Radio Button Dynamic Option Color */
+  .color-options label span {
+    poistion: absolte;
+    content: "";
+    width: 4px;
+    height: 100%;
+    left: 0;
+    top: 0;
   }
   
   
