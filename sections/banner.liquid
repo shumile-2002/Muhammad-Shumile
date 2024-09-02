@@ -342,14 +342,14 @@
 
   // Adding click event on bread-crumb opener
 
-  sideBarOpener.addEventListener('click', (e) => {
+  sideBarOpener.addEventListener('click', () => {
     const activeCrumb = document.querySelector('.bread-crumb.active');
 
     if (!activeCrumb) {
-      e.target.classList.add('active');
+      sideBarOpener.classList.add('active');
       sideBar.classList.add('active');
     } else {
-      e.target.classList.remove('active');
+      sideBarOpener.classList.remove('active');
       sideBar.classList.remove('active');
     }
   })
