@@ -23,6 +23,7 @@
 ///////////////////////////// Options change handler Function /////////////////////////////
 
 function handleChange(event) {
+  console.log('changed');
   const form = event.target.closest('form');
   if (form) {
     let productID = form.getAttribute('data-product-id');
