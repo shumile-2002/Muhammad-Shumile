@@ -51,7 +51,11 @@ function handleChange(event) {
     console.log('Matching Varaint: ', matchingVariant);
 
     const id_input = document.getElementById(`product-${productID}`);
-    id_input.value = matchingVariant.id;
+    if (id_input){
+      id_input.value = matchingVariant.id;
+    } else {
+      console.log('Hidden input not found');
+    }
     console.log('Updated Varaint ID: ', id_input);
     
   }
