@@ -50,6 +50,7 @@ function handleChange(event) {
     const matchingVariant = findMatchingVariant(selectedSize, selectedColor, variants);
     console.log('Matching Varaint: ', matchingVariant);
 
+    console.log(`product-${productID}`)
     const id_input = document.getElementById(`product-${productID}`);
     if (id_input){
       id_input.value = matchingVariant.id;
