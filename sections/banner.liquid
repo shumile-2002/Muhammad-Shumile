@@ -22,7 +22,10 @@
 
     <div class="banner-content">
       <div class="banner-title"><h2>{{ section.settings.banner-title }}</h2></div>
-      <div class="banner-text"><p>{{ section.settings.banner_text }}</p></div>
+      <div class="banner-text">
+        <p class="deskop-content">{{ section.settings.banner_text }}</p>
+        <p class="mobile-content">{{ section.settings.banner_text_mobile }}</p>
+      </div>
       <div class="banner-button">
         <a href="#" class="custom-button content-button">
           {{ section.settings.banner_button_text }}
@@ -242,7 +245,7 @@
       display: flex;
       flex-direction: column-reverse;
     }
-    .mobile-banner {
+    .mobile-banner, .banner-text .mobile-content {
       display: block;
     }
     .banner-title, .banner-text p, .banner-button  {
@@ -252,9 +255,13 @@
       font-size: 30px;
       font-weight: 500;
     }
+    .banner-text .deskop-content {
+      display: none;
+    }
     .banner-text p {
       max-width: 100%;
     }
+    
     
   }
   
@@ -291,6 +298,11 @@
         "type": "text",
         "id": "banner_text",
         "label": "Banner Content"
+      },
+      {
+        "type": "text",
+        "id": "banner_text_mobile",
+        "label": "Banner Content Mobile"
       },
       {
         "type": "text",
