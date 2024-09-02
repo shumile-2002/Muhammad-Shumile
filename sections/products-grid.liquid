@@ -81,9 +81,14 @@
   </div>
 </section>
 
-
 <script src={{ 'products-grid.js' | asset_url }} defer="defer"></script>
 
+
+
+<!-- Passing Products Data to our Javascript -->
+<script id="products" type="application/json">
+  {{ section.settings.products | json }}
+</script
 
  
 <style>
@@ -314,6 +319,7 @@
 }
     .product-popup {
       width: 350px;
+      padding: 15px;
     }
     .product-price {
       margin-bottom: 0;
