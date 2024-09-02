@@ -24,6 +24,28 @@
                   <div class="product-des">{{ product.description }}</div>
                 </div>
               </div>
+              <div class="product-form">
+                <form method="post" action="/cart/add" class="product-form-single" id="product-form" data-product-id={{ product.id }}>
+                  {% for option in product.options_with_values %}
+                    {% if option.name == "Color" %}
+                      <div class="color-picker input-set">
+                        <label>{{ option.name }}</label>
+                        <div class="color-options input-options">
+                          {% for value in option.values %}
+                            <input type="radio" id="{{ value }}-{{ product.id }}" name="{{ option.name }}">
+                            <label class="radio-label-{{ forloop.index }}" for="{{ value }}-{{ product.id }}">
+                              <span></span> {{ value }}
+                            </label>
+                          {% endfor %}
+                        </div>
+                      </div>
+                      {% elsif  option.name == "Size"%}
+                         <div class="size-picker input-set">
+                        </div>
+                      {% endif %}
+                  {% endfor %}
+                </form>
+              </div>
             </div>
           </div>
         {% endfor %}
