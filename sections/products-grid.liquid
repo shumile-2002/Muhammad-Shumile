@@ -1,6 +1,27 @@
+<section class="products-grid">
+  <div class="custom-page-width">
+    <h2 class="products-grid-title">
+      {{  }}
+    </h2>
+  </div>
+</section>
+
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Products Grid",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Section Title"
+      },
+      {
+        "type": "product_list",
+        "id": "products",
+        "label": "Products List",
+        "limit": 6
+      }
+    ]
   }
 {% endschema %}
