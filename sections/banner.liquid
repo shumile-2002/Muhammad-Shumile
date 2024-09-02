@@ -297,6 +297,22 @@
       top: 50%;
       transform: translate(-50%, -50%);
     }
+    .mobile-sidebar {
+      position: fixed;
+      padding: 20px 0;
+      background: #f5f5f5;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      transform: translateX(-100%);
+      z-index: -1;
+      opacity: 0;
+    }
+    .mobile-sidebar.active {
+      transform: translateX(0);
+      z-index: 1;
+      opacity: 1;
+      position: unset;
+      
+    } 
   }
   
   
