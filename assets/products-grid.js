@@ -24,6 +24,8 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     });
 
     if (shouldAddGift) {
+
+      // makrin FormData for gift product
       const giftData = new FormData();
       giftData.append('items[0][id]', giftVariantId);
       giftData.append('items[0][quantity]', 1);
