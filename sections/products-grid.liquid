@@ -1,8 +1,19 @@
 <section class="products-grid">
   <div class="custom-page-width">
     <h2 class="products-grid-title">
-      {{  }}
+      {{ section.settings.title }}
     </h2>
+
+    <div class="products-list-grid">
+      {% for product in section.settings.products %}
+          <div class="product-container">
+            <img src={{ product.media.first | img_url: 'master' }}>
+            <div class="product-button"><img src="https://cdn.shopify.com/s/files/1/0616/3801/7089/files/product-button.png?v=1725297871"></div>
+
+            
+          </div>
+        {% endfor %}
+    </div>
   </div>
 </section>
 
