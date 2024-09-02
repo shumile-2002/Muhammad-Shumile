@@ -13,8 +13,15 @@
             <div class="product-detail product-popup">
               <div class="popup-close"><img src="https://cdn.shopify.com/s/files/1/0616/3801/7089/files/side-cross.png?v=1725297871"></div>
               <div class="product-info">
+                
                 <div class="product-media">
                   <img src={{ product.media.first | img_url: 'master' }}>
+                </div>
+
+                <div class="product-content">
+                  <h3 class="product-title">{{ product.title }}</h3>
+                  <p class="product-price">{{ product.price | money }}</p>
+                  <div class="product-des">{{ product.description }}</div>
                 </div>
               </div>
             </div>
