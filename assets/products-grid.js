@@ -5,6 +5,13 @@ let shouldAddGift = false;
 // We can also get this from customizer
 const giftVariantId = 41679668707393;
 
+ let giftData = {
+ 'items': [{
+  'id': 41679668707393,
+  'quantity': 1
+  }]
+};
+
 
 
 ///////////////////////////// Ajax Add To Cart Functionality using Fetch /////////////////////////////
@@ -23,7 +30,10 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     });
 
     if (shouldAddGift) {
-      
+      await fetch("/cart/add", {
+      method: "post",
+      body: giftData
+    });
     }
 
     // fetching updated Cart Data
