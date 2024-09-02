@@ -3,7 +3,7 @@
 let shouldAddGift = false;
 
 // We can also get this from customizer
-const giftVariantId = 41679665102913;
+const giftVariantId = 41679668707393;
 
  let giftData = {
  'items': [{
@@ -33,7 +33,14 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     if (shouldAddGift) {
       await fetch("/cart/add", {
       method: "post",
-      body: JSON.stringify(giftData)
+      body: {
+              items: [
+                {
+                  id: `${giftVariantId}`,
+                  quantity: 1
+                }
+              ]
+            }
     });
       console.log('Gift Product Added !!')
     }
