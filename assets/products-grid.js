@@ -66,6 +66,8 @@ const products = JSON.parse(document.getElementById('products').text);
 
 // Function to get all the variants by product ID
 function getVariantsByProductId(productId) {
+  const products = JSON.parse(document.getElementById('products').text);
+  
   const product = products.find((p) => p.id === productId);
   return product ? product.variants : null
 }
