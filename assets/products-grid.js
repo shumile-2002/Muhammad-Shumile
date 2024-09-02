@@ -1,3 +1,25 @@
+
+
+
+///////////////////////////// Event Listener to Select and Radio Inputs /////////////////////////////
+
+ document.querySelectorAll('form[action="/card/add"]').forEach((form) => {
+   // Listene to all select elements
+   const selects = form.querySelectorAll('select');
+  selects.forEach((select) => {
+    select.addEventListener('change', handleChange)
+  })
+
+   // Listene to all radio inputs
+   const radios = form.querySelectorAll('input[type="radio"]');
+  radios.forEach((radio) => {
+    radio.addEventListener('change', handleChange)
+  })
+ })
+
+
+
+
 ///////////////////////////// Options change handler Function /////////////////////////////
 
 function handleChange(event) {
