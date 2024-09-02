@@ -1,4 +1,28 @@
 
+///////////////////////////// Ajax Add To Cart Functionality using Fetch /////////////////////////////
+document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
+
+  // async function to handle Promosies 
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    await fetch("/cart/add", {
+      method: "post",
+      body: data
+    });
+
+    // fetching updated Cart Data
+    const cartData = await fetch("/cart.json");
+    const cartDataContents = cartData.json();
+
+    
+    
+  })
+ })
+
+
 
 
 ///////////////////////////// Event Listener to Select and Radio Inputs /////////////////////////////
