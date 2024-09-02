@@ -1,4 +1,9 @@
 
+
+
+
+
+
 // Product detail popup script
 const popupBtns = document.querySelectorAll('.product-button');
 const closeBtns = document.querySelectorAll('.popup-close');
@@ -11,6 +16,9 @@ popupBtns.forEach((btn) => {
 closeBtns.forEach((btn) => {
   btn.addEventListener("click", (e) => e.currentTarget.parentNode.parentNode.classList.remove('active'));
 })
+
+
+
 
 // Custom Select Script Code
 document.addEventListener('DOMContentLoaded', function() {
