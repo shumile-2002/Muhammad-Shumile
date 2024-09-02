@@ -20,6 +20,17 @@ function handleChange(event) {
     } else {
       selectedColor = form.querySelector('input[name="Color"]').value;
     }
+    
+    console.log('Selected Color: ', selectedColor);
+    console.log('Selected Size: ', selectedSize);
+
+    const matchingVariant = findMatchingVariant(selectedSize, selectedColor, variants);
+    console.log('Matching Varaint: ', matchingVariant);
+
+    const id_input = document.getElementById(`product-${productID}`);
+    id_input.value = matchingVariant.id;
+    console.log('Updated Varaint ID: ', id_input);
+    
   }
 }
 
