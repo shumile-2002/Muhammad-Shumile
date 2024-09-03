@@ -18,6 +18,8 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    cartMsg.style.opacity = 1;
+
     const data = new FormData(form);
 
     await fetch("/cart/add", {
@@ -49,7 +51,7 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     } else {
       cartMsg.textContent = `Selected Product added.  Cart now  has ${cartDataContents.item_count} items` 
     }
-    cartMsg.style.opacity = 1;
+    
     
 
   })
@@ -105,6 +107,8 @@ function handleChange(event) {
       shouldAddGift = true;
     }
 
+
+    
     const matchingVariant = findMatchingVariant(selectedSize, selectedColor, variants);
     console.log('Matching Varaint: ', matchingVariant);
 
