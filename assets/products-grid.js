@@ -21,7 +21,7 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
 
     // Styles on form submission
     cartMsg.style.opacity = 1;
-    form.querySelector('.cart-link');.style.display = "block";
+    form.querySelector('.cart-link').style.display = "block";
 
     const data = new FormData(form);
 
