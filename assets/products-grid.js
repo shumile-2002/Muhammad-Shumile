@@ -49,6 +49,8 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     } else {
       cartMsg.textContent = `Selected Product added.  Cart now  has ${cartDataContents.item_count}` 
     }
+    cartMsg.style.opacity = 1;
+    
 
   })
  })
