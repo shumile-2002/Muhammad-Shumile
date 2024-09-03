@@ -77,7 +77,7 @@
         {% endfor %}
     </div>
   </div>
-  <div class="cart-mg"></div>
+  <div class="cart-mg">MSG</div>
 </section>
 
 <script src={{ 'products-grid.js' | asset_url }} defer="defer"></script>
@@ -310,6 +310,20 @@
     cursor: pointer;
 }
 
+  /* Cart Message */
+  .cart-msg {
+    position: fixed;
+    top: 35px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000000;
+    color: #fff;
+    padding: 5px 10px;
+    z-index: 102;
+    opacity: 0;
+    font-size: 18px;
+  }
+  
   /* Mobile View Breakpoint */
   @media(max-width: 768px) {
     .products-list-grid {
@@ -343,6 +357,8 @@
     }
     
   }
+
+  
   
   
   
