@@ -3,7 +3,7 @@
 
 let shouldAddGift = false;
 let cartMsg = document.getElementById('cart-msg');
-let cartLink = document.querySelector('.product-container.active').querySelector('.cart-link');
+
 
 
 // Variant Id of "Soft Winter Jacket"
@@ -19,8 +19,9 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    // Styles on form submission
     cartMsg.style.opacity = 1;
-    cartLink.style.display = "block";
+    form.querySelector('.cart-link');.style.display = "block";
 
     const data = new FormData(form);
 
