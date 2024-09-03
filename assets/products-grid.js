@@ -167,7 +167,10 @@ popupBtns.forEach((btn) => {
 })
 // need to remove class active from over parent above 
 closeBtns.forEach((btn) => {
-  btn.addEventListener("click", (e) => e.currentTarget.parentNode.parentNode.classList.remove('active'));
+  btn.addEventListener("click", (e) => {
+    e.currentTarget.parentNode.parentNode.classList.remove('active');
+    cartMsg.style.opacity = 0;
+  });
 })
 
 
