@@ -3,7 +3,7 @@
 
 let shouldAddGift = false;
 let cartMsg = document.getElementById('cart-msg');
-let cartLink = document.querySelector('.product-container.active').querySelector('.cart-link'));
+let cartLink = document.querySelector('.product-container.active').querySelector('.cart-link');
 
 
 // Variant Id of "Soft Winter Jacket"
