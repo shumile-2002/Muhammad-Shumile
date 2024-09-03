@@ -45,9 +45,9 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     console.log('Updated Cart: ', cartDataContents);
 
     if (shouldAddGift) {
-      cartMsg.textContent = `Selected Product & Gift added.  Cart now  has ${cartDataContents.item_count}` 
+      cartMsg.textContent = `Selected Product & Gift added.  Cart now  has ${cartDataContents.item_count} items` 
     } else {
-      cartMsg.textContent = `Selected Product added.  Cart now  has ${cartDataContents.item_count}` 
+      cartMsg.textContent = `Selected Product added.  Cart now  has ${cartDataContents.item_count} items` 
     }
     cartMsg.style.opacity = 1;
     
