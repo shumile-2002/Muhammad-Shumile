@@ -105,6 +105,8 @@ function handleChange(event) {
     
     if (selectedSize == "M" && selectedColor == "Black") {
       shouldAddGift = true;
+    } else {
+      shouldAddGift = false;
     }
 
 
