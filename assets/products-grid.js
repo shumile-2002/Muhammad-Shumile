@@ -2,6 +2,8 @@
 ///////////////////////////// Checking for gift /////////////////////////////
 
 let shouldAddGift = false;
+let cartMsg = document.getElementById('cart-msg');
+
 
 // Variant Id of "Soft Winter Jacket"
 const giftVariantId = 41679668707393;
@@ -34,15 +36,19 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
         method: "post",
         body: giftData
       });
-      
-      console.log('Gift Product Added !!')
     }
-
+    
     // fetching updated Cart Data
     const cartData = await fetch("/cart.json");
     const cartDataContents = await cartData.json();
 
     console.log('Updated Cart: ', cartDataContents);
+
+    if (shouldAddGift) {
+      cartMsg.textContent = `Selected Product & Gift added.  Cart now  has ${cartDataContents.item_count}` 
+    } else {
+      cartMsg.textContent = `Selected Product added.  Cart now  has ${cartDataContents.item_count}` 
+    }
 
   })
  })
