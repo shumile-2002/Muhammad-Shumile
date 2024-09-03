@@ -1,24 +1,3 @@
-function showAddedToCartMessage() {
-  // Create a new div for the message
-  const messageDiv = document.createElement('div');
-  messageDiv.textContent = 'Product added to cart!';
-  messageDiv.style.position = 'fixed';
-  messageDiv.style.top = '10px';
-  messageDiv.style.right = '10px';
-  messageDiv.style.padding = '10px';
-  messageDiv.style.backgroundColor = 'green';
-  messageDiv.style.color = 'white';
-  messageDiv.style.zIndex = '1000';
-
-  // Append the message to the body
-  document.body.appendChild(messageDiv);
-
-  // Remove the message after 2-3 seconds
-  setTimeout(() => {
-    messageDiv.remove();
-  }, 3000); // 3000ms = 3 seconds
-}
-
 
 ///////////////////////////// Checking for gift /////////////////////////////
 
@@ -65,7 +44,6 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
 
     console.log('Updated Cart: ', cartDataContents);
 
-    showAddedToCartMessage()
   })
  })
 
