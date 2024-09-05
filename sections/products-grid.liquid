@@ -85,7 +85,7 @@
 
 
 
-<!-- Passing Products Data to our Javascript -->
+<!-- Passing Products Data to the Javascript -->
 <script id="products" type="application/json">
   {{ section.settings.products | json }}
 </script>
@@ -95,7 +95,6 @@
   @import url('https://fonts.googleapis.com/css2?family=Lustria&display=swap');
   
   /* Products Gird */
-
     .products-grid {
       margin: 30px 0;
     }
@@ -382,7 +381,7 @@
 </style>
 
 
-
+<!-- To make products list and title customizable -->
 {% schema %}
   {
     "name": "Products Grid",
