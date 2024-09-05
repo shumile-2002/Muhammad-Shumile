@@ -163,7 +163,7 @@ const closeBtns = document.querySelectorAll('.popup-close');
 
 // PopUp open method
 function openPopup(e) {
-  e.currentTarget.parentNode.classList.add('active'));
+  e.currentTarget.parentNode.classList.add('active');
   document.body.addEventListener('click', closePopup)
 } 
 
