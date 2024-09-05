@@ -161,16 +161,26 @@ function findMatchingVariant(size, color, variants) {
 const popupBtns = document.querySelectorAll('.product-button');
 const closeBtns = document.querySelectorAll('.popup-close');
 
+// PopUp open method
+function openPopup(e) {
+  e.currentTarget.parentNode.classList.add('active'));
+  document.body.addEventListener('click', closePopup)
+} 
 
+// applying popup opening function
 popupBtns.forEach((btn) => {
-  btn.addEventListener("click", (e) => e.currentTarget.parentNode.classList.add('active'));
+  btn.addEventListener("click", openPopup)
 })
-// need to remove class active from over parent above 
-closeBtns.forEach((btn) => {
-  btn.addEventListener("click", (e) => {
-    e.currentTarget.parentNode.parentNode.classList.remove('active');
+
+// PopUp close method
+function closePopup (e) {
+  e.currentTarget.parentNode.parentNode.classList.remove('active');
     cartMsg.style.opacity = 0;
-  });
+}
+
+// apllying popup closing function 
+closeBtns.forEach((btn) => {
+  btn.addEventListener("click", closePopup)
 })
 
 
