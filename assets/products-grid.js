@@ -6,7 +6,7 @@ let cartMsg = document.getElementById('cart-msg');
 
 
 
-// Variant Id of "Soft Winter Jacket"
+// Variant Id of Gift Product "Soft Winter Jacket (M \ Balck)"
 const giftVariantId = 41679668707393;
 
 
