@@ -11,7 +11,7 @@ const giftVariantId = 41679668707393;
 
 
 
-///////////////////////////// Ajax Add To Cart Functionality using Fetch /////////////////////////////
+///////////////////////////// Ajax Add To Cart Functionality using Fetch Cart API /////////////////////////////
 
 document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
 
@@ -54,9 +54,6 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     } else {
       cartMsg.textContent = `Selected Product added.  Cart now  has ${cartDataContents.item_count} items` 
     }
-    
-    
-
   })
  })
 
@@ -85,18 +82,19 @@ document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
 ///////////////////////////// Options change handler Function /////////////////////////////
 
 function handleChange(event) {
-  console.log('changed');
+  
   const form = event.target.closest('form');
   if (form) {
+
+    // Getting product ID and Varaints for that product
     let productID = Number(form.getAttribute('data-product-id'));
-    console.log("Product ID: ", productID);
     const variants = getVariantsByProductId(productID);
     console.log(variants);
 
-    // Getting Size selected by user
+    // Getting Size Input selected by user
     const selectedSize = form.querySelector('select').value
 
-    // Getting Color selected by user
+    // Getting Color Input selected by user
     let currentColorOption = form.querySelector('input[name="Color"]:checked');
     let selectedColor;
 
@@ -105,7 +103,8 @@ function handleChange(event) {
     } else {
       selectedColor = form.querySelector('input[name="Color"]').value;
     }
-    
+
+    // Checking if gift should be added or not
     if (selectedSize == "M" && selectedColor == "Black") {
       shouldAddGift = true;
     } else {
@@ -113,11 +112,11 @@ function handleChange(event) {
     }
 
 
-    
+    // Finding vairant details from size and color
     const matchingVariant = findMatchingVariant(selectedSize, selectedColor, variants);
     console.log('Matching Varaint: ', matchingVariant);
 
-    console.log(`product-${productID}`)
+    // replacing variant id with newly slected variant
     const id_input = document.getElementById(`product-${productID}`);
     if (id_input){
       id_input.value = matchingVariant.id;
@@ -137,7 +136,6 @@ function handleChange(event) {
 const products = JSON.parse(document.getElementById("products").text);
 
 // Function to get all the variants by product ID
-
 function getVariantsByProductId(productId) {
   const product = products.find((p) => p.id === productId);
   console.log("Product", product)
@@ -185,7 +183,7 @@ closeBtns.forEach((btn) => {
 
 
 
-// Custom Select Script Code
+// Custom Select Script Code 
 document.addEventListener('DOMContentLoaded', function() {
   var customSelects = document.querySelectorAll('.custom-select-wrapper');
   
