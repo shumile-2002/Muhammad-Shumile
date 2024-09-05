@@ -174,7 +174,7 @@ popupBtns.forEach((btn) => {
 
 // PopUp close method
 function closePopup (e) {
-  console.log(e.currentTarget.parentNode.parentNodee.currentTarget.parentNode.parentNodee.currentTarget.parentNode.parentNode)
+  console.log(e.currentTarget.parentNode.parentNode)
   e.currentTarget.parentNode.parentNode.classList.remove('active');
     cartMsg.style.opacity = 0;
 }
