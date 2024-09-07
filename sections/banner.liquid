@@ -354,7 +354,7 @@
   sideBarOpener.addEventListener('click', () => {
     const activeCrumb = document.querySelector('.bread-crumb.active');
 
-    if (!activeCrumb) {
+    if (activeCrumb == null) {
       sideBarOpener.classList.add('active');
       sideBar.classList.add('active');
     } else {
