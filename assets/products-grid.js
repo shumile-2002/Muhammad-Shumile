@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     selectOptions.addEventListener('click', function(e) {
-      if (e.target.tagName === 'li') {
+      if (e.target.tagName === 'LI') {
         selectStyled.textContent = e.target.textContent;
         selectElement.value = e.target.getAttribute('rel');
         selectStyled.classList.remove('active');
