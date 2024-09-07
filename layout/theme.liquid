@@ -372,5 +372,30 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <script>
+
+  // Mobile Sidebar Script
+  const sideBar = document.querySelector('.mobile-sidebar');
+  const sideBarOpener = document.querySelector('.bread-crumb');
+
+  // Adding click event on bread-crumb opener
+
+  sideBarOpener.addEventListener('click', (e) => {
+    console.log(e.target)
+    const activeCrumb = document.querySelector('.bread-crumb.active');
+
+    if (activeCrumb == null) {
+      sideBarOpener.classList.add('active');
+      sideBar.classList.add('active');
+    } else {
+      sideBarOpener.classList.remove('active');
+      sideBar.classList.remove('active');
+    }
+  })
+  
+</script>
+
+    
   </body>
 </html>
